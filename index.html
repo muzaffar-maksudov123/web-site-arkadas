@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Arkadas | Турецкая кухня в Хиве</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍴</text></svg>">
+    <meta name="theme-color" content="#1a1a1a">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">ARKADAS</span>
+                <span class="logo-icon">🍴</span>
+            </div>
+            
+            <div class="nav-menu-btn" id="menu-btn">
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="nav-overlay" id="nav-overlay"></div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <div class="menu-header">
+                    <span class="menu-title">Меню</span>
+                    <button class="menu-close" id="menu-close">&times;</button>
+                </div>
+                <div class="menu-items">
+                    <a href="#home" class="menu-item">
+                        <i class="fas fa-home"></i>
+                        <span>Главная</span>
+                    </a>
+                    <a href="#menu" class="menu-item">
+                        <i class="fas fa-utensils"></i>
+                        <span>Меню</span>
+                    </a>
+                    <a href="#contacts" class="menu-item">
+                        <i class="fas fa-phone"></i>
+                        <span>Контакты</span>
+                    </a>
+                    <div class="menu-divider"></div>
+                    <a href="tel:+998XXXXXXXXX" class="menu-item call">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>Заказать</span>
+                    </a>
+                    <a href="https://t.me/arkadashsss" class="menu-item telegram" target="_blank">
+                        <i class="fab fa-telegram"></i>
+                        <span>Telegram</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главный экран -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">ARKADAS</h1>
+                <p class="hero-subtitle">Турецкая кухня в Хиве</p>
+                <div class="hero-divider"></div>
+                <p class="hero-description">
+                    Asl Turk tami endi Xiva ostonosida. Настоящий турецкий вкус теперь в Хиве.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <!-- <span class="stat-number">45</span>
+                        <span class="stat-label">блюд</span> -->
+                    </div>
+                    <div class="stat">
+                        <!-- <span class="stat-number">TR</span>
+                        <span class="stat-label">вкус</span> -->
+                    </div>
+                    <div class="stat">
+                        <!-- <span class="stat-number">24/7</span>
+                        <span class="stat-label">доставка</span> -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-scroll">
+                <span>Листайте вниз</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+        
+        <div class="hero-image">
+            <div class="image-overlay"></div>
+        </div>
+    </section>
+
+    <!-- Категории меню -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Наше меню</h2>
+            <p class="section-subtitle">Tam va sifat uygunligi bizda mujassam</p>
+            
+            <div class="categories-grid">
+                <div class="category-card" data-category="food">
+                    <div class="category-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="category-title">Еда</h3>
+                    <!-- <p class="category-count">25 блюд</p> -->
+                    <div class="category-overlay"></div>
+                </div>
+                
+                <div class="category-card" data-category="drinks">
+                    <div class="category-icon">
+                        <i class="fas fa-wine-glass-alt"></i>
+                    </div>
+                    <h3 class="category-title">Напитки</h3>
+                    <!-- <p class="category-count">10 видов</p> -->
+                    <div class="category-overlay"></div>
+                </div>
+                
+                <div class="category-card" data-category="sweets">
+                    <div class="category-icon">
+                        <i class="fas fa-ice-cream"></i>
+                    </div>
+                    <h3 class="category-title">Салаты</h3>
+                    <!-- <p class="category-count">10 десертов</p> -->
+                    <div class="category-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Полное меню -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <div class="menu-header">
+                <h2 class="menu-main-title">Меню ресторана</h2>
+                <div class="menu-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="menu-search-input" placeholder="Поиск блюда...">
+                </div>
+            </div>
+            
+            <div class="menu-tabs">
+                <button class="menu-tab active" data-category="all">Все</button>
+                <button class="menu-tab" data-category="food">Еда</button>
+                <button class="menu-tab" data-category="drinks">Напитки</button>
+                <button class="menu-tab" data-category="sweets">Салаты</button>
+            </div>
+            
+            <!-- ВАЖНО: МЕНЯЕМ ТОЛЬКО ЗДЕСЬ -->
+            <div class="menu-items-container" id="menu-items">
+                <!-- Блюда загружаются через JS -->
+            </div>
+            
+            <div class="menu-counter">
+                <!-- <span class="counter-number" id="item-count">45</span>
+                <span class="counter-text">блюд в меню</span> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contacts-section" id="contacts">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            
+            <div class="contacts-grid">
+                <div class="contact-info">
+                    <h3 class="contact-title">Наш адрес</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p class="contact-text">Хива, уголок рядом с историческим центром</p>
+                            <a href="https://maps.google.com/?q=Хива,уголок+рядом+с+историческим+центром" 
+                               class="contact-link" target="_blank">
+                                Открыть в картах
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <p class="contact-text">Часы работы:</p>
+                            <p class="contact-time">Пн-Чт: 10:00 - 23:00</p>
+                            <p class="contact-time">Пт-Вс: 10:00 - 00:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <p class="contact-text">Телефон:</p>
+                            <a href="tel:+998XXXXXXXXX" class="contact-phone">+998 XX XXX XX XX</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fab fa-telegram"></i>
+                        <div>
+                            <p class="contact-text">Telegram:</p>
+                            <a href="https://t.me/arkadashsss" class="contact-telegram" target="_blank">@arkadashsss</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-action">
+                    <h3 class="action-title">Свяжитесь с нами</h3>
+                    <p class="action-text">Закажите доставку или забронируйте столик</p>
+                    
+                    <div class="action-buttons">
+                        <a href="tel:+998XXXXXXXXX" class="action-btn call">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>Позвонить</span>
+                        </a>
+                        
+                        <a href="https://wa.me/998XXXXXXXXX" class="action-btn whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                        
+                        <a href="https://t.me/arkadashsss" class="action-btn telegram" target="_blank">
+                            <i class="fab fa-telegram"></i>
+                            <span>Telegram</span>
+                        </a>
+                    </div>
+                    
+                    <div class="delivery-info">
+                        <div class="delivery-item">
+                            <i class="fas fa-shipping-fast"></i>
+                            <div>
+                                <h4>Бесплатная доставка</h4>
+                                <p>При заказе от 100,000 сум</p>
+                            </div>
+                        </div>
+                        <div class="delivery-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>30-45 минут</h4>
+                                <p>Среднее время доставки</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">ARKADAS</h3>
+                    <p class="footer-slogan">Asl Turk tami endi Xiva ostonosida</p>
+                    <p class="footer-tagline">Настоящий турецкий вкус</p>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://t.me/arkadashsss" class="social-icon" target="_blank">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#home">Главная</a>
+                    <a href="#menu">Меню</a>
+                    <a href="#contacts">Контакты</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Arkadas Restaurant. Все права защищены.</p>
+                <p>Хива, Узбекистан</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Плавающие кнопки -->
+    <!-- <div class="floating-buttons">
+        <a href="tel:+998XXXXXXXXX" class="floating-btn call-btn">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <a href="https://wa.me/998XXXXXXXXX" class="floating-btn whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div> -->
+
+    <!-- Скрипт -->
+    <script src="app.js"></script>
+</body>
+</html>
