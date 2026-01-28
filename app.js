@@ -26,7 +26,7 @@ const menuData = {
             price: 20000, 
             description: "", 
             tags: ["Популярное", ],
-            image: "Img/uno.jpg"  // ← ВАШЕ ФОТО
+            image: "img/uno.jpg"  // ← ВАШЕ ФОТО
         },
         { 
             id: 4, 
